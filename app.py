@@ -30,6 +30,12 @@ def root():
         answers=answers
     )
 
+@app.route("/", methods=["POST"])
+def answer():
+    form = flask.request.form
+    from json import dumps
+    return dumps(form)
+
 
 if __name__ == "__main__":
     app.run()

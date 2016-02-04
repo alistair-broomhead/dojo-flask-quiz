@@ -6,10 +6,12 @@
     <h1> The Dojo Quiz </h1>
     <h2> Question {{ question_number }} </h2>
     <p> {{ question }}</p>
-<form>
+<form id="answer_{{ question_number }}" method="post">
+    <radiogroup>
     {% for answer in answers %}
-        <label><input type="checkbox" value="{{ answer }}">{{ answer }}</label><br>
+        <input type="radio" name="{{ question_number }}" value="{{ answer }}"/> {{ answer }} <br/>
     {%  endfor %}
+    </radiogroup>
     <input type="submit" value="Submit">
 </form>
 
