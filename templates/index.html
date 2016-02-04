@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title> Dojo Quiz </title>
+</head>
+<body>
+    <h1> The Dojo Quiz </h1>
+    <h2> Question {{ question_number }} </h2>
+    <p> {{ question }}</p>
+<form>
+    {% for answer in answers %}
+        <label><input type="checkbox" value="{{ answer }}">{{ answer }}</label><br>
+    {%  endfor %}
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
