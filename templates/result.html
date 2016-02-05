@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Dojo Quiz </title>
+</head>
+<body>
+    <h1> The Dojo Quiz </h1>
+    <h2> {{ question }} </h2>
+
+    <div>
+        <p>
+        You answered
+        {% if given_answer == correct_answer %}
+            <span style="color: green"> {{ given_answer }} </span>
+            This is correct, congratulations!
+        {% else %}
+            <span style="color: red"> {{ given_answer }} </span>.
+             The correct answer was
+            <span style="color: green"> {{ given_answer }} </span>!
+        {% endif %}
+        </p>
+    </div>
+
+    <form>
+        <button> Get another question </button>
+    </form>
+
+</body>
+</html>

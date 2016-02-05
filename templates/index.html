@@ -1,19 +1,17 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title> Dojo Quiz </title>
 </head>
 <body>
     <h1> The Dojo Quiz </h1>
-    <h2> Question {{ question_number }} </h2>
-    <p> {{ question }}</p>
-<form id="answer_{{ question_number }}" method="post">
-    <radiogroup>
+    <h2> {{ question }} </h2>
+    <form id="answer_{{ question_number }}" method="post">
     {% for answer in answers %}
         <input type="radio" name="{{ question_number }}" value="{{ answer }}"/> {{ answer }} <br/>
     {%  endfor %}
-    </radiogroup>
-    <input type="submit" value="Submit">
-</form>
+        <input type="submit" value="Submit">
+    </form>
 
 </body>
 </html>
